@@ -16,17 +16,15 @@ app.post('/register', function (req, res) {
     role
   });
   
-  usuario.save((err, usuarioDB) => {    if (err) {
+  usuario.save((err, usuarioDB) => {    
+    if (err) {
       return res.status(400).json({
          ok: false,
          err,
       });
     }    
+    res.redirect("/menu");
     
-    res.json({
-          ok: true,
-          usuario: usuarioDB
-       });
 })
 });
 

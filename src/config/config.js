@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'dev') {
 process.env.URLDB = urlDB;
 
 //Caducidad del token
-process.env.CADUCIDAD_TOKEN = '48h';
+process.env.CADUCIDAD_TOKEN = '2h';
 
 //Seeds de autenticación
 process.env.SEED_AUTENTICACION = process.env.SEED_AUTENTICACION ||  'este-es-el-seed-desarrollo';

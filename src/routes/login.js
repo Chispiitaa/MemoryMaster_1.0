@@ -6,7 +6,7 @@ a través de este modelo que vamos a poder guardar, editar, buscar, y listas los
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Usuario = require('./../models/usuario');
+const Usuario = require('../models/usuario');
 const app = express();
 
 
@@ -16,7 +16,7 @@ app.post('/login', function (req, res) {
     let body = req.body;
 
     //guardamos la información que recibimos.
-    Usuario.findOne({ email : body.email }, (erro, usuarioDB)=>{
+    Usuario.findOne({ user: body.username }, (erro, usuarioDB)=>{
         if (erro) {
             return res.status(500).json({
             ok: false,
